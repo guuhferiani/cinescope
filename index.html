@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineScope - Onde o Cinema ganha Vida</title>
+    <!-- Google Fonts: Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header id="main-header" class="main-header sticky" role="navigation">
+        <div class="container navbar">
+            <!-- Logotipo -->
+            <div class="logo">
+                <a href="#" id="logo-link">Cine<span>Scope</span></a>
+            </div>
+
+            <!-- Navegação Principal (Desktop) -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Séries</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações de Utilidade -->
+            <div class="header-actions">
+                <button id="search-toggle" class="icon-btn" aria-label="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Alternar Tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="user-profile" class="icon-btn" aria-label="Perfil">
+                    <i class="fa-solid fa-circle-user"></i>
+                </button>
+                
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="hamburger" class="hamburger-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu principal">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Pesquisa Expansível -->
+        <div id="search-overlay" class="search-overlay">
+            <div class="container">
+                <input type="text" placeholder="Pesquisar filmes, séries..." id="search-input">
+                <button id="search-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero / Carrossel -->
+        <section class="hero-carousel" aria-label="Destaques">
+            <div class="carousel-track" id="carousel-track">
+                <!-- Slide 1: Lançamento -->
+                <div class="carousel-slide active" style="background-image: url('assets/hero_1.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Novo Lançamento</span>
+                        <h1 class="slide-title">Neon Shadows</h1>
+                        <p class="slide-description">Não Perca: Assista em Primeira Mão. Uma jornada visual pelas profundezas de uma metrópole cyberpunk onde cada sombra esconde um segredo.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/1" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/1" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Popular -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_2.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Popular</span>
+                        <h1 class="slide-title">The Elder Journey</h1>
+                        <p class="slide-description">O Mais Visto da Semana. Descubra os segredos dos antigos picos nevados e as lendas que habitam o reino esquecido.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/2" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/2" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Binge -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_3.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Para Maratonar</span>
+                        <h1 class="slide-title">Rainy Verdict</h1>
+                        <p class="slide-description">Para Fazer Binge-Watching. Entre na mente de um detetive implacável em uma cidade que nunca dorme e nunca para de chover.</p>
+                        <div class="slide-actions">
+                            <a href="/series/1" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/series/1" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Niche -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_4.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Joia Escondida</span>
+                        <h1 class="slide-title">Sunset Melodies</h1>
+                        <p class="slide-description">Descubra Joias Escondidas. Uma obra-prima artística que explora a conexão entre a música rústica e a beleza efêmera da natureza.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/3" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/3" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Documentary -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_5.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Documentário</span>
+                        <h1 class="slide-title">Beyond the Void</h1>
+                        <p class="slide-description">Expanda Seus Horizontes. Uma viagem visualmente deslumbrante pelas nebulosas e mistérios do espaço profundo.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/4" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/4" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Classic -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_6.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Clássico</span>
+                        <h1 class="slide-title">Midnight Station</h1>
+                        <p class="slide-description">Reviva Um Grande Sucesso. Redescubra este clássico do noir onde o destino e o mistério se encontram sob o nevoeiro de uma estação solitária.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/5" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/5" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles de Navegação -->
+            <button class="carousel-control prev" id="prev-btn" aria-label="Slide anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next" id="next-btn" aria-label="Próximo slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores (Dots) -->
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Injetado via JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+</html>
