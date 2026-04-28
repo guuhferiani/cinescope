@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineScope - Onde o Cinema ganha Vida</title>
+    <!-- Google Fonts: Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header id="main-header" class="main-header sticky" role="navigation">
+        <div class="container navbar">
+            <!-- Logotipo -->
+            <div class="logo">
+                <a href="#" id="logo-link">Cine<span>Scope</span></a>
+            </div>
+
+            <!-- Navegação Principal (Desktop) -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Séries</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações de Utilidade -->
+            <div class="header-actions">
+                <button id="search-toggle" class="icon-btn" aria-label="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Alternar Tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="user-profile" class="icon-btn" aria-label="Perfil">
+                    <i class="fa-solid fa-circle-user"></i>
+                </button>
+                
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="hamburger" class="hamburger-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu principal">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Pesquisa Expansível -->
+        <div id="search-overlay" class="search-overlay">
+            <div class="container">
+                <input type="text" placeholder="Pesquisar filmes, séries..." id="search-input">
+                <button id="search-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero / Carrossel -->
+        <section class="hero-carousel" aria-label="Destaques">
+            <div class="carousel-track" id="carousel-track">
+                <!-- Slide 1: Lançamento -->
+                <div class="carousel-slide active" style="background-image: url('assets/hero_1.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Novo Lançamento</span>
+                        <h1 class="slide-title">Neon Shadows</h1>
+                        <p class="slide-description">Não Perca: Assista em Primeira Mão. Uma jornada visual pelas profundezas de uma metrópole cyberpunk onde cada sombra esconde um segredo.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/1" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/1" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Popular -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_2.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Popular</span>
+                        <h1 class="slide-title">The Elder Journey</h1>
+                        <p class="slide-description">O Mais Visto da Semana. Descubra os segredos dos antigos picos nevados e as lendas que habitam o reino esquecido.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/2" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/2" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Binge -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_3.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Para Maratonar</span>
+                        <h1 class="slide-title">Rainy Verdict</h1>
+                        <p class="slide-description">Para Fazer Binge-Watching. Entre na mente de um detetive implacável em uma cidade que nunca dorme e nunca para de chover.</p>
+                        <div class="slide-actions">
+                            <a href="/series/1" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/series/1" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Niche -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_4.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Joia Escondida</span>
+                        <h1 class="slide-title">Sunset Melodies</h1>
+                        <p class="slide-description">Descubra Joias Escondidas. Uma obra-prima artística que explora a conexão entre a música rústica e a beleza efêmera da natureza.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/3" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/3" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Documentary -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_5.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Documentário</span>
+                        <h1 class="slide-title">Beyond the Void</h1>
+                        <p class="slide-description">Expanda Seus Horizontes. Uma viagem visualmente deslumbrante pelas nebulosas e mistérios do espaço profundo.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/4" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/4" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Classic -->
+                <div class="carousel-slide" style="background-image: url('assets/hero_6.png');">
+                    <div class="overlay"></div>
+                    <div class="container slide-content">
+                        <span class="badge">Clássico</span>
+                        <h1 class="slide-title">Midnight Station</h1>
+                        <p class="slide-description">Reviva Um Grande Sucesso. Redescubra este clássico do noir onde o destino e o mistério se encontram sob o nevoeiro de uma estação solitária.</p>
+                        <div class="slide-actions">
+                            <a href="/movie/5" class="btn btn-primary"><i class="fa-solid fa-play"></i> Assistir Agora</a>
+                            <a href="/movie/5" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Mais Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles de Navegação -->
+            <button class="carousel-control prev" id="prev-btn" aria-label="Slide anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next" id="next-btn" aria-label="Próximo slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores (Dots) -->
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Injetado via JS -->
+            </div>
+        </section>
+
+        <!-- Seção de Proposta e Destaques Interativos -->
+        <section id="proposal" class="proposal-section">
+            <div class="container">
+                <div class="proposal-header">
+                    <h2 class="section-title">O que é o CineScope?</h2>
+                    <p class="section-subtitle">Transformamos sua relação com o cinema através de uma experiência imersiva e personalizada.</p>
+                </div>
+
+                <div class="interactive-highlights">
+                    <div class="highlights-list">
+                        <div class="highlight-item active" data-target="curadoria">
+                            <div class="highlight-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div class="highlight-info">
+                                <h3>Curadoria Inteligente</h3>
+                                <p>Descubra filmes selecionados por especialistas.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item" data-target="comunidade">
+                            <div class="highlight-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                            <div class="highlight-info">
+                                <h3>Comunidade Vibrante</h3>
+                                <p>Conecte-se com milhares de cinéfilos.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item" data-target="avaliacoes">
+                            <div class="highlight-icon"><i class="fa-solid fa-star-half-stroke"></i></div>
+                            <div class="highlight-info">
+                                <h3>Avaliações em Profundidade</h3>
+                                <p>Análises críticas que exploram cada detalhe.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item" data-target="listas">
+                            <div class="highlight-icon"><i class="fa-solid fa-list-check"></i></div>
+                            <div class="highlight-info">
+                                <h3>Listas Personalizadas</h3>
+                                <p>Sua jornada organizada do seu jeito.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-display">
+                        <div class="display-content active" id="curadoria">
+                            <div class="image-wrapper">
+                                <img src="assets/feature_curadoria.png" alt="Curadoria Inteligente">
+                            </div>
+                            <div class="display-overlay">
+                                <h3>Excelência em Seleção</h3>
+                                <p>Nossa equipe de críticos e algoritmos avançados filtram o ruído para trazer até você apenas as obras que realmente merecem seu tempo.</p>
+                            </div>
+                        </div>
+                        <div class="display-content" id="comunidade">
+                            <div class="image-wrapper">
+                                <img src="assets/feature_comunidade.png" alt="Comunidade Vibrante">
+                            </div>
+                            <div class="display-overlay">
+                                <h3>O Espaço do Cinéfilo</h3>
+                                <p>Participe de discussões, grupos de estudo e sessões coletivas. No CineScope, o cinema é uma experiência de conexão real.</p>
+                            </div>
+                        </div>
+                        <div class="display-content" id="avaliacoes">
+                            <div class="image-wrapper">
+                                <img src="assets/feature_avaliacoes.png" alt="Avaliações em Profundidade">
+                            </div>
+                            <div class="display-overlay">
+                                <h3>Olhar Especializado</h3>
+                                <p>Vá além do óbvio. Nossas críticas abordam direção, fotografia e roteiro, oferecendo uma nova perspectiva técnica e emocional.</p>
+                            </div>
+                        </div>
+                        <div class="display-content" id="listas">
+                            <div class="image-wrapper">
+                                <img src="assets/feature_listas.png" alt="Listas Personalizadas">
+                            </div>
+                            <div class="display-overlay">
+                                <h3>Seu Cinema, Suas Regras</h3>
+                                <p>Crie, compartilhe e siga listas temáticas. De "Clássicos Esquecidos" a "Futuros Distópicos", você está sempre no controle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Filmes -->
+        <section id="movies" class="content-grid-section">
+            <div class="container">
+                <div class="section-header-flex">
+                    <h2 class="section-title">Filmes em Destaque</h2>
+                    <div class="filter-group">
+                        <span class="filter-label">Filtros:</span>
+                        <div class="filter-scroll">
+                            <button class="filter-chip active">Todos</button>
+                            <button class="filter-chip">Sci-Fi</button>
+                            <button class="filter-chip">Drama</button>
+                            <button class="filter-chip">Ação</button>
+                            <button class="filter-chip">Animação</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <!-- Movie 1 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/movie_1.png" alt="Nexus Protocol" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <span class="card-year">2024</span>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Sci-Fi</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 8.8</span>
+                            </div>
+                            <h3>Nexus Protocol</h3>
+                        </div>
+                    </div>
+
+                    <!-- Movie 2 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/movie_2.png" alt="Silent Echoes" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <span class="card-year">2023</span>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Drama</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 9.1</span>
+                            </div>
+                            <h3>Silent Echoes</h3>
+                        </div>
+                    </div>
+
+                    <!-- Movie 3 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/movie_3.png" alt="Velocity City" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <span class="card-year">2024</span>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Ação</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 8.5</span>
+                            </div>
+                            <h3>Velocity City</h3>
+                        </div>
+                    </div>
+
+                    <!-- Movie 4 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/movie_4.png" alt="Forest Magic" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <span class="card-year">2022</span>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Animação</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 8.9</span>
+                            </div>
+                            <h3>Forest Magic</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Séries -->
+        <section id="series" class="content-grid-section alt-bg">
+            <div class="container">
+                <div class="section-header-flex">
+                    <h2 class="section-title">Séries Imperdíveis</h2>
+                    <div class="filter-group">
+                        <span class="filter-label">Filtros:</span>
+                        <div class="filter-scroll">
+                            <button class="filter-chip active">Todos</button>
+                            <button class="filter-chip">Fantasia</button>
+                            <button class="filter-chip">Mistério</button>
+                            <button class="filter-chip">Thriller</button>
+                            <button class="filter-chip">Comédia</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <!-- Series 1 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/series_1.png" alt="Aether Realms" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="card-badges">
+                                <span class="card-badge">2023</span>
+                                <span class="card-badge highlight">3 Temps</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Fantasia</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 9.3</span>
+                            </div>
+                            <h3>Aether Realms</h3>
+                        </div>
+                    </div>
+
+                    <!-- Series 2 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/series_2.png" alt="Shadow Manor" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="card-badges">
+                                <span class="card-badge">2024</span>
+                                <span class="card-badge highlight">1 Temp</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Mistério</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 8.7</span>
+                            </div>
+                            <h3>Shadow Manor</h3>
+                        </div>
+                    </div>
+
+                    <!-- Series 3 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/series_3.png" alt="Code Breach" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="card-badges">
+                                <span class="card-badge">2024</span>
+                                <span class="card-badge highlight">2 Temps</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Thriller</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 9.0</span>
+                            </div>
+                            <h3>Code Breach</h3>
+                        </div>
+                    </div>
+
+                    <!-- Series 4 -->
+                    <div class="content-card">
+                        <div class="card-image">
+                            <img src="assets/series_4.png" alt="Rooftop Vibes" loading="lazy">
+                            <div class="card-overlay">
+                                <button class="action-btn"><i class="fa-solid fa-play"></i></button>
+                                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="card-badges">
+                                <span class="card-badge">2022</span>
+                                <span class="card-badge highlight">5 Temps</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-meta">
+                                <span class="genre-tag">Comédia</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 8.4</span>
+                            </div>
+                            <h3>Rooftop Vibes</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>
